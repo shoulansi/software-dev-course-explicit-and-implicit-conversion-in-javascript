@@ -19,14 +19,29 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = Number("5") - 2;
+//Turned string 5 into an integer 5, same result.
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = false;
+//Strings are considered a true value, having "false" would always make it true.
 if (isValid) {
     console.log("This is valid!");
 }
 
 let age = "25";
-let totalAge = age + 5;
+let totalAge = (Number(age)) + 5;
+//Adding the Number() explicit converison turns the age string into an integer allowing for total age to calculate.
 console.log("Total Age: " + totalAge);
+
+
+let bigNumber = "175" - 27;
+console.log(bigNumber);
+//This is my implicit code.
+
+console.log(String(null));
+//Here are some explicit examples.
+let notANumber;
+console.log(notANumber)
+
+console.log(Number("A"))
